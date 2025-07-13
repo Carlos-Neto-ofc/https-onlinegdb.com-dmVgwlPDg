@@ -1,0 +1,106 @@
+#include <stdio.h>
+#include <locale.h>
+#include <unistd.h>
+#include <stdlib.h>
+int main()
+{
+float resultado = 0;
+char opcao;
+float primeiro = 0;
+float segundo = 0;
+char opcao2;
+int confirmar = 0;
+ char cn;   
+   while(confirmar == 0){
+    printf("Digite o primeiro número\n");
+    scanf(" %f", &primeiro);
+    
+    printf("Digite o tipo de conta(/, -, +, *)\n");
+    scanf(" %c", &opcao);
+    printf("Digite o segundo número\n");
+     printf("Ex: 1, 2, 3, 4\n");
+    scanf("%f", &segundo);
+    
+    switch(opcao){
+        
+       case '*':
+       
+       //multiplicacão
+       resultado = primeiro * segundo;
+       
+       printf("%.2f multiplicado por %.2f é: %.2f\n", primeiro, segundo, resultado);
+       
+       break;
+       
+       case '/':
+       
+       
+       //divisão
+       resultado = primeiro / segundo;
+       
+       
+       printf("%.2f dividido por %.2f é: %.2f\n", primeiro, segundo, resultado);
+       
+       break;
+       
+       case '-':
+       
+       //subtração
+       resultado = primeiro - segundo;
+       
+       
+       printf("%.2f menos %.2f é: %.2f", primeiro, segundo, resultado);
+       
+       break;
+       
+       case '+':
+       
+       //adição
+       resultado = primeiro + segundo;
+      
+       
+       printf("%.2f mais %.2f é: %.2f", primeiro, segundo, resultado);
+       
+       break;
+       
+       default:
+       printf("Digite um número válido\n");
+    }
+    
+    printf("\n\n\nDeseja calcular novamente? (S|N)\n");
+    scanf(" %c", &cn);
+    
+    
+    if(cn == 'S' || cn == 's'){
+        system("clear");
+        printf("Reiniciando...\n");
+        sleep(2);
+        system("clear");
+        }
+       else if(cn == 'N' || cn == 'n'){
+           system("clear");
+           printf("Saindo...\n");
+           sleep(2);
+           system("clear");
+           confirmar = 1;
+           
+           
+           
+       }
+        
+        
+        
+   }
+        
+        
+        
+        
+        
+        
+        
+
+    
+
+
+   
+}
